@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+.git/
+.DS_Store
+.github/
+.gitignore
+.opencode/
+.specify/
+.claude/
+.idea/
+.vscode/
