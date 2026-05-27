@@ -1,6 +1,7 @@
 # Coding Standards Drift Control
 
 Beta Spec Kit extension for reviewing implemented features against the repository coding-standards baseline and appending remediation tasks for drift findings.
+Track and fix code that moves away from technical definitions adding the smallest amout of complexity possible to the Spec Kit artifacts.
 
 ## Features
 
