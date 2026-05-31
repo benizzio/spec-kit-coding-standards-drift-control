@@ -2,8 +2,6 @@
 description: "Generate or refresh coding-standards-drift-report.md for the active feature"
 ---
 
-<!-- Extension: coding-standards-drift-control -->
-<!-- Config: .specify/extensions/coding-standards-drift-control/ -->
 # Generate Coding Standards Drift Report
 
 Review the active feature implementation for divergences from the repository coding-standards baseline and write a structured drift report.
