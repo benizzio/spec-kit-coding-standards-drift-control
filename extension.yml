@@ -26,7 +26,7 @@ hooks:
   after_implement:
     command: speckit.coding-standards-drift-control.report
     optional: true
-    prompt: "Run coding-standards drift control after implementation?"
+    prompt: "Run Coding Standards Drift Control after implementation?"
     description: "Generate or refresh the coding-standards drift report for the active feature"
 
 tags:
