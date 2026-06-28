@@ -2,9 +2,12 @@
 
 ## Unreleased
 
+## 0.4.0
+
 - Make report reruns incremental by preserving prior findings with `Pending`/`Resolved` status
 - Limit remediation task planning to pending drift findings
 - Add a final generated remediation task that marks successfully remediated findings as `Resolved`
+- Add per-finding remediation planning before task generation so each pending drift item records a surgical implementation plan grounded in report evidence and coding standards
 
 ## 0.3.1
 
