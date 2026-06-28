@@ -17,7 +17,7 @@ provides:
   commands:
     - name: speckit.coding-standards-drift-control.report
       file: commands/speckit.coding-standards-drift-control.report.md
-      description: "Generate or refresh coding-standards-drift-report.md for the active feature"
+      description: "Generate or incrementally refresh coding-standards-drift-report.md for the active feature"
     - name: speckit.coding-standards-drift-control.remediation-plan
       file: commands/speckit.coding-standards-drift-control.remediation-plan.md
       description: "Append Spec Kit remediation tasks to tasks.md from the drift report"
@@ -27,7 +27,7 @@ hooks:
     command: speckit.coding-standards-drift-control.report
     optional: true
     prompt: "Run Coding Standards Drift Control after implementation?"
-    description: "Generate or refresh the coding-standards drift report for the active feature"
+    description: "Generate or incrementally refresh the coding-standards drift report for the active feature"
 
 tags:
   - "analysis"
