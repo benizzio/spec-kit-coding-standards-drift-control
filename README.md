@@ -25,7 +25,7 @@ Track and fix code that moves away from technical definitions while adding the s
 ### Release Install
 
 ```bash
-specify extension add coding-standards-drift-control --from https://github.com/benizzio/spec-kit-coding-standards-drift-control/archive/refs/tags/v0.3.1.zip
+specify extension add coding-standards-drift-control --from https://github.com/benizzio/spec-kit-coding-standards-drift-control/archive/refs/tags/v0.4.0.zip
 ```
 
 ### Development Install
@@ -106,13 +106,13 @@ uv tool install specify-cli --force --from git+https://github.com/github/spec-ki
 - Documentation: `README.md`
 - Changelog: `CHANGELOG.md`
 - License: `MIT`
-- Current beta version: `0.3.1`
+- Current beta version: `0.4.0`
 
 ## Catalog Submission Metadata
 
 - Extension ID: `coding-standards-drift-control`
 - Extension Name: `Coding Standards Drift Control`
-- Version: `0.3.1`
+- Version: `0.4.0`
 - Commands: `2`
 - Hooks: `1`
 - Suggested tags: `analysis`, `standards`, `quality`, `maintenance`

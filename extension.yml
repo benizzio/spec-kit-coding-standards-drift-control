@@ -3,7 +3,7 @@ schema_version: "1.0"
 extension:
   id: coding-standards-drift-control
   name: "Coding Standards Drift Control"
-  version: "0.3.1"
+  version: "0.4.0"
   description: "Generate coding-standards drift reports and remediation tasks for active Spec Kit features"
   author: "Igor Benicio de Mesquita"
   repository: "https://github.com/benizzio/spec-kit-coding-standards-drift-control"
@@ -20,7 +20,7 @@ provides:
       description: "Generate or incrementally refresh coding-standards-drift-report.md for the active feature"
     - name: speckit.coding-standards-drift-control.remediation-plan
       file: commands/speckit.coding-standards-drift-control.remediation-plan.md
-      description: "Append Spec Kit remediation tasks to tasks.md from the drift report"
+      description: "Record remediation plans and append Spec Kit remediation tasks from the drift report"
 
 hooks:
   after_implement:
