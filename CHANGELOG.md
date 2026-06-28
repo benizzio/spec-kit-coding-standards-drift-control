@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Make report reruns incremental by preserving prior findings with `Pending`/`Resolved` status
+- Limit remediation task planning to pending drift findings
+- Add a final generated remediation task that marks successfully remediated findings as `Resolved`
+
 ## 0.3.1
 
 - Fix review feedback from the source extraction PR by correcting README wording

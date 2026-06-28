@@ -11,7 +11,7 @@ Track and fix code that moves away from technical definitions while adding the s
 - Uses `AGENTS.md`, `.specify/memory/constitution.md`, and other known agent-instruction files as the review baseline when present
 - Focuses on coding standards and engineering practices rather than feature-domain correctness
 - Blocks report generation and remediation planning while the active feature has open or pending tasks
-- Uses `CODE-STAND-DRIFT-###` finding identifiers and migrates legacy `DRIFT-###` findings to the new format on rerun
+- Uses `CODE-STAND-DRIFT-###` finding identifiers, preserves historical findings with `Pending`/`Resolved` status, and migrates legacy `DRIFT-###` findings to the new format on rerun
 - Appends remediation tasks to `tasks.md` so `/speckit.implement` can execute them
 
 ## Requirements
@@ -37,7 +37,7 @@ specify extension add --dev /path/to/spec-kit-coding-standards-drift-control
 ## Workflow
 
 1. Finish the active feature's normal implementation tasks.
-2. Run `/speckit.coding-standards-drift-control.report` to generate or refresh `coding-standards-drift-report.md`.
+2. Run `/speckit.coding-standards-drift-control.report` to generate or incrementally refresh `coding-standards-drift-report.md`.
 3. Run `/speckit.coding-standards-drift-control.remediation-plan` to append a drift remediation phase to `tasks.md`.
 4. Run `/speckit.implement` to execute the generated remediation tasks.
 
@@ -45,7 +45,7 @@ specify extension add --dev /path/to/spec-kit-coding-standards-drift-control
 
 ### `/speckit.coding-standards-drift-control.report`
 
-Generates or refreshes `specs/{feature}/coding-standards-drift-report.md` for the active feature after implementation is complete.
+Generates or incrementally refreshes `specs/{feature}/coding-standards-drift-report.md` for the active feature after implementation is complete.
 
 Example:
 
@@ -69,7 +69,8 @@ Example:
 - Loads `AGENTS.md`, `.specify/memory/constitution.md`, and known agent-instruction files such as `CLAUDE.md`, `GEMINI.md`, `.github/copilot-instructions.md`, `.cursorrules`, `.cursor/rules/**`, `.windsurfrules`, and `.clinerules` when present
 - Falls back to a conservative baseline derived from the local codebase when those files do not define concrete standards
 - Keeps findings grounded in exact file references and explicit policy evidence
-- Skips remediation task generation when the report has no findings or when a matching `CODE-STAND-DRIFT-###` task, or a legacy `DRIFT-###` task for the same finding, already exists in `tasks.md`
+- On rerun, keeps prior report findings, appends newly discovered drift as `Pending`, and leaves `Resolved` transitions to the final generated remediation task
+- Skips remediation task generation when the report has no pending findings or when a matching `CODE-STAND-DRIFT-###` task, or a legacy `DRIFT-###` task for the same finding, already exists in `tasks.md`
 
 ## Configuration
 
@@ -88,7 +89,7 @@ Complete the remaining open or pending tasks in the active feature's `tasks.md`,
 
 ### No Remediation Tasks Were Added
 
-The report may contain no findings, or matching `CODE-STAND-DRIFT-###` tasks, or legacy `DRIFT-###` tasks for the same findings, may already exist in `tasks.md`.
+The report may contain no pending findings, or matching `CODE-STAND-DRIFT-###` tasks, or legacy `DRIFT-###` tasks for the same pending findings, may already exist in `tasks.md`.
 
 ### `specify extension` Commands Are Missing
 
