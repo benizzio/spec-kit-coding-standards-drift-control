@@ -39,7 +39,7 @@ specify extension add --dev /path/to/spec-kit-coding-standards-drift-control
 1. Finish the active feature's normal implementation tasks.
 2. Run `/speckit.coding-standards-drift-control.report` to generate or incrementally refresh `coding-standards-drift-report.md`.
 3. Run `/speckit.coding-standards-drift-control.remediation-plan` to append a drift remediation phase to `tasks.md`.
-4. Run `/speckit.implement` to execute the generated remediation tasks.
+4. Execute the generated remediation tasks with `/speckit.implement`.
 
 ## Commands
 
@@ -89,7 +89,7 @@ Complete the remaining open or pending tasks in the active feature's `tasks.md`,
 
 ### No Remediation Tasks Were Added
 
-The report may contain no pending findings, or matching `CODE-STAND-DRIFT-###` tasks, or legacy `DRIFT-###` tasks for the same pending findings, may already exist in `tasks.md`.
+Either the report contains no pending findings, or matching `CODE-STAND-DRIFT-###` tasks (or legacy `DRIFT-###` tasks for the same pending findings) already exist in `tasks.md`.
 
 ### `specify extension` Commands Are Missing
 
